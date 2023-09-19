@@ -77,3 +77,8 @@ Dengan melakukan filtering, **ip.src == 10.51.40.1 && ip.dst != 10.39.55.34**
 Kemudian, dimasukkan ke dalam nc
 
 ![flag soal 9](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/88996914/d07841c9-1500-4f76-9f19-98fd74a95289)
+
+## Kesulitan
+
+1. Kurang memahami dan mengerti bagaimana cara filtering pada wireshark
+2. Perlu berpikir dua kali untuk soal - soal yang terdapat enkripsi

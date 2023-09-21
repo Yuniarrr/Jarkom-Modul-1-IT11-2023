@@ -6,8 +6,10 @@
 
 ## Soal 1
 User melakukan berbagai aktivitas dengan menggunakan protokol FTP. Salah satunya adalah mengunggah suatu file.
-  a. Berapakah sequence number (raw) pada packet yang menunjukkan aktivitas tersebut? 
-  b. Berapakah acknowledge number (raw) pada packet yang menunjukkan aktivitas tersebut? 
+
+a. Berapakah sequence number (raw) pada packet yang menunjukkan aktivitas tersebut?
+
+b. Berapakah acknowledge number (raw) pada packet yang menunjukkan aktivitas tersebut? 
   
   Karena yang diminta adalah protokol FTP maka lakukan filtering ftp || ftp-data
   
@@ -25,8 +27,9 @@ User melakukan berbagai aktivitas dengan menggunakan protokol FTP. Salah satunya
   
   ![adanb](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/e3a99005-9707-43ac-9020-86d238c1e443)
 
-  c. Berapakah sequence number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
-  d. Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
+c. Berapakah sequence number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
+
+d. Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
 
 Karena sudah diurutkan sesuai timeline, maka dapat dilihat bahwa paket yang merupakan respon dari aktivitas unggah file ada tepat dibawah paket dengan kode STOR
 
@@ -86,28 +89,29 @@ Kemudian, dimasukkan ke dalam nc
 ## Soal 5
 Soal:
 Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
-  a. Berapa banyak packet yang berhasil di capture dari file pcap tersebut?
 
-  tinggal diurutkan saja jumlah paket, terlihat bahwa total keseluruhan adalah 60
+a. Berapa banyak packet yang berhasil di capture dari file pcap tersebut?
 
-  ![total](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/19e07324-a42f-4240-bb5d-10fb270f3f45)
+tinggal diurutkan saja jumlah paket, terlihat bahwa total keseluruhan adalah 60
 
-  b. Port berapakah pada server yang digunakan untuk service SMTP?
+![total](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/19e07324-a42f-4240-bb5d-10fb270f3f45)
 
-  lakukan filtering SMTP
+b. Port berapakah pada server yang digunakan untuk service SMTP?
 
-  ![SMTP_Filter](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/0ce0a05c-8f49-4300-8619-8fcc28ca0c18)
+lakukan filtering SMTP
 
-  kemudian klik salah satu paket dan cari port yang digunakan, jawaban: 25
+![SMTP_Filter](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/0ce0a05c-8f49-4300-8619-8fcc28ca0c18)
 
-  ![25](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/edc1a790-df90-4440-86eb-5b2d4b48e6cd)
+kemudian klik salah satu paket dan cari port yang digunakan, jawaban: 25
+
+![25](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/edc1a790-df90-4440-86eb-5b2d4b48e6cd)
 
   
-  d. Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
+d. Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
 
-  Ip pribadi biasanya berupa 192.168.x.x, 10.x.x.x, atau 172.16.x.x hingga 172.31.x.x, maka cukup cari ip yang memiliki awalan angka selain diatas maka ditemukanlah ip 74.53.140.153
+Ip pribadi biasanya berupa 192.168.x.x, 10.x.x.x, atau 172.16.x.x hingga 172.31.x.x, maka cukup cari ip yang memiliki awalan angka selain diatas maka ditemukanlah ip 74.53.140.153
 
-  ![public_IP](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/74c23a26-9ff5-435f-9883-7f66d1f99f8c)
+![public_IP](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/74c23a26-9ff5-435f-9883-7f66d1f99f8c)
 
 Untuk mendapatkan kode nc pertama follow salah satu paket yang menggunakan protokol SMTP. 
 

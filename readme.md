@@ -5,6 +5,39 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Midyanisa Yuniar (5027211025)
 
 ## Soal 1
+User melakukan berbagai aktivitas dengan menggunakan protokol FTP. Salah satunya adalah mengunggah suatu file.
+  a. Berapakah sequence number (raw) pada packet yang menunjukkan aktivitas tersebut? 
+  b. Berapakah acknowledge number (raw) pada packet yang menunjukkan aktivitas tersebut? 
+  
+  Karena yang diminta adalah protokol FTP maka lakukan filtering ftp || ftp-data
+  
+  ![filter1](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/adf3da8b-f0fa-41fa-84fd-153b64f79ee0)
+  
+  karena yang dicari adalah proses mengunggah file, maka dicari kata kunci STOR (kata kunci untuk upload file ke FTP server).
+  
+  ![STOR](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/a00bc328-8285-4159-a8a2-b6ac777da547)
+    
+  untuk mempermudah alur maka paket STOR tadi ditandai kemudian ubah urutannya sesuai timeline
+
+  ![TIMELINE](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/26e4f27b-652d-4ef3-a9ab-49e1a12745cc)
+
+  Sequence (raw) dan acknowledgement raw untuk aktivitas unggah file ada pada packet dengan kode STOR tadi
+  
+  ![adanb](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/e3a99005-9707-43ac-9020-86d238c1e443)
+
+  c. Berapakah sequence number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
+  d. Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
+
+Karena sudah diurutkan sesuai timeline, maka dapat dilihat bahwa paket yang merupakan respon dari aktivitas unggah file ada tepat dibawah paket dengan kode STOR
+
+![respon](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/33e01444-765f-4c9d-9bee-a0a132e31c44)
+
+maka masukkan informasi yang sudah didapat ke nc 
+
+![flg1](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/ec31e93b-0bbf-4f5d-9ff5-4ef40663784e)
+
+
+## Soal 2
 
 ## Soal 3
 

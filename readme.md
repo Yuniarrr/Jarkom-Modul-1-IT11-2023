@@ -83,7 +83,7 @@ Kemudian, dimasukkan ke dalam nc
 
 ![flag soal 4](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/88996914/7d5a91ea-f355-470b-8636-534d4c0e94ed)
 
-## Soal 4
+## Soal 5
 Soal:
 Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
   a. Berapa banyak packet yang berhasil di capture dari file pcap tersebut?

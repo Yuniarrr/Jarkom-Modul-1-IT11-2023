@@ -38,6 +38,20 @@ maka masukkan informasi yang sudah didapat ke nc
 
 
 ## Soal 2
+ soal: Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!
+ Mencari nama web server yang digunakan pada website portal jaringan, caranya dengan melakukan filtering terhadap ip yang digunakan pada praktikum:
+
+![nama_servernya](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/b784dc49-1746-4b30-8bee-8d27b2487338)
+
+kemudian follow htp stream pada paket yang memiliki protokol HTTP
+
+![followStream](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/7c9bd6f5-e770-4c29-8cb1-971975f9629c)
+
+dari informasi diatas dapat dilihat informasi terkait server yang tertulis yaitu server: gunicorn.
+Selanjutkan masukkan jawaban tersebut ke nc
+
+![flg2](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/98bf7c98-4e69-4237-b920-f06f9044cb90)
+
 
 ## Soal 3
 
@@ -68,6 +82,53 @@ Berapa nilai checksum yang didapat dari header pada paket nomor 130? **0x18e5**
 Kemudian, dimasukkan ke dalam nc
 
 ![flag soal 4](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/88996914/7d5a91ea-f355-470b-8636-534d4c0e94ed)
+
+## Soal 4
+Soal:
+Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
+  a. Berapa banyak packet yang berhasil di capture dari file pcap tersebut?
+
+  tinggal diurutkan saja jumlah paket, terlihat bahwa total keseluruhan adalah 60
+
+  ![total](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/19e07324-a42f-4240-bb5d-10fb270f3f45)
+
+  b. Port berapakah pada server yang digunakan untuk service SMTP?
+
+  lakukan filtering SMTP
+
+  ![SMTP_Filter](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/0ce0a05c-8f49-4300-8619-8fcc28ca0c18)
+
+  kemudian klik salah satu paket dan cari port yang digunakan, jawaban: 25
+
+  ![25](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/edc1a790-df90-4440-86eb-5b2d4b48e6cd)
+
+  
+  d. Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
+
+  Ip pribadi biasanya berupa 192.168.x.x, 10.x.x.x, atau 172.16.x.x hingga 172.31.x.x, maka cukup cari ip yang memiliki awalan angka selain diatas maka ditemukanlah ip 74.53.140.153
+
+  ![public_IP](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/74c23a26-9ff5-435f-9883-7f66d1f99f8c)
+
+Untuk mendapatkan kode nc pertama follow salah satu paket yang menggunakan protokol SMTP. 
+
+![followSMTP](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/5ab6fb88-ba9a-4f3f-8fea-4b2863c8bf43)
+
+Pada paket akan ditemukan sebuah kode yang sudah dienkripsi dengan base64. Kode tersebut digunakan untuk membuka password pada file .txt yang disematkan pada soal
+
+![password](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/dda4e80e-d5f9-4481-aaa8-abba13bda57d)
+
+untuk mengetahui password, dilakukan dekripsi dengan base64
+
+![decryptBase64](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/363c8663-007c-465f-9a92-d0c681b7675f)
+
+setelah file dibuka dengan password yang ada, maka akan diberikan kode instance untuk nc
+
+![instance_Unlocked](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/cbc2de3d-72ae-4244-9ad6-e4c42f446f85)
+
+masukkan jawaban yang sudah didapat ke nc
+
+![flg5](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/27218a47-b944-45ea-ab94-524df8c729ef)
+
 
 ## Soal 7
 
@@ -111,7 +172,28 @@ Kemudian, dimasukkan ke dalam nc
 
 ![flag soal 9](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/88996914/d07841c9-1500-4f76-9f19-98fd74a95289)
 
+## Soal 10
+Soal: Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet
+
+Pertama ikuti TCP stream dari network TELNET
+
+![telnet_follow](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/7d380edc-de52-43d3-b9df-35c74d193250)
+
+cari kredensial telnet yang berhasil
+
+![success](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/3c29a0f7-6469-4b78-8b70-c715b4931292)
+
+setelah itu,  cari user yang memiliki password yang sama dengan menelusuri stream sebelumnya maka ditemukan user dan passwordnya
+
+![dhafin](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/403cf7c7-73d1-4635-8844-92e3fb6c0041)
+
+kemudian masukkan jawaban pada nc sesuai format yang diberikan
+
+![image](https://github.com/Yuniarrr/Jarkom-Modul-1-IT11-2023/assets/107184933/7b9668cd-0e80-4be2-b89f-23cd60d43220)
+
+
 ## Kesulitan
 
 1. Kurang memahami dan mengerti bagaimana cara filtering pada wireshark
 2. Perlu berpikir dua kali untuk soal - soal yang terdapat enkripsi
+3. Terkecoh pada soal 10 karena rupanya perlu dicari lagi user yang sesuai dengan password yang diketahui.
